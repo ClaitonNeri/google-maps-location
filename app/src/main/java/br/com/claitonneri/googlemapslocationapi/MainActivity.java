@@ -18,6 +18,10 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+//
+// Created by Claiton Neri
+//
+
 public class MainActivity extends AppCompatActivity {
 
     TextView txt_location;
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buildLocationRequest() {
+        // Implementar alta precisao na localizacao do dispositivo
         locationRequest = new LocationRequest();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
@@ -97,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buildLocationCallBack() {
+        // Atualizar a localizacao
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
